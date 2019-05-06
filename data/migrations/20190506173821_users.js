@@ -3,7 +3,7 @@ exports.up = function(knex, Promise) {
     .createTable('users', tbl => {
       tbl.increments();
       tbl
-        .string('name', 255)
+        .string('username', 255)
         .notNullable()
         .unique();
       tbl
