@@ -20,6 +20,9 @@ server.use(
 );
 
 const users = require('./users/routes.js');
-server.use('/api/', users);
+server.use('/api/users', users);
+
+const auth = require('./auth/routes.js');
+server.use('/api/auth', auth);
 
 server.listen(3300, () => console.log("server on port 3300"));
